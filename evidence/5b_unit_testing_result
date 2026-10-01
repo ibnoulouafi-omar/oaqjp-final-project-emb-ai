@@ -1,0 +1,379 @@
+LIVE WATSON TESTS: network access to the course endpoint is required.
+python -m unittest -v test_emotion_detection
+test_anger (test_emotion_detection.TestEmotionDetector.test_anger)
+Recognize anger. ... ERROR
+test_disgust (test_emotion_detection.TestEmotionDetector.test_disgust)
+Recognize disgust. ... ERROR
+test_fear (test_emotion_detection.TestEmotionDetector.test_fear)
+Recognize fear. ... ERROR
+test_joy (test_emotion_detection.TestEmotionDetector.test_joy)
+Recognize joy. ... ERROR
+test_sadness (test_emotion_detection.TestEmotionDetector.test_sadness)
+Recognize sadness. ... ERROR
+
+======================================================================
+ERROR: test_anger (test_emotion_detection.TestEmotionDetector.test_anger)
+Recognize anger.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\urllib3\connection.py", line 239, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\urllib3\connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\urllib3\connectionpool.py", line 494, in _make_request
+    raise new_e
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\urllib3\connectionpool.py", line 470, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\urllib3\connectionpool.py", line 1125, in _validate_conn
+    conn.connect()
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\urllib3\connection.py", line 827, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\urllib3\connection.py", line 248, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<HTTPSConnection(host='sn-watson-emotion.labs.skills.network', port=443) at 0x242eb569580>, 'Connection to sn-watson-emotion.labs.skills.network timed out. (connect timeout=15)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\requests\adapters.py", line 696, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\urllib3\connectionpool.py", line 847, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\urllib3\util\retry.py", line 555, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='sn-watson-emotion.labs.skills.network', port=443): Max retries exceeded with url: /v1/watson.runtime.nlp.v1/NlpService/EmotionPredict (Caused by ConnectTimeoutError(<HTTPSConnection(host='sn-watson-emotion.labs.skills.network', port=443) at 0x242eb569580>, 'Connection to sn-watson-emotion.labs.skills.network timed out. (connect timeout=15)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\test_emotion_detection.py", line 17, in test_anger
+    result = emotion_detector("I am really mad about this")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\EmotionDetection\emotion_detection.py", line 24, in emotion_detector
+    response = requests.post(
+               ^^^^^^^^^^^^^^
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\requests\api.py", line 134, in post
+    return request("post", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\requests\api.py", line 71, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\requests\sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\requests\sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\requests\adapters.py", line 717, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='sn-watson-emotion.labs.skills.network', port=443): Max retries exceeded with url: /v1/watson.runtime.nlp.v1/NlpService/EmotionPredict (Caused by ConnectTimeoutError(<HTTPSConnection(host='sn-watson-emotion.labs.skills.network', port=443) at 0x242eb569580>, 'Connection to sn-watson-emotion.labs.skills.network timed out. (connect timeout=15)'))
+
+======================================================================
+ERROR: test_disgust (test_emotion_detection.TestEmotionDetector.test_disgust)
+Recognize disgust.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\urllib3\connection.py", line 239, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\urllib3\connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\urllib3\connectionpool.py", line 494, in _make_request
+    raise new_e
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\urllib3\connectionpool.py", line 470, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\urllib3\connectionpool.py", line 1125, in _validate_conn
+    conn.connect()
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\urllib3\connection.py", line 827, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\urllib3\connection.py", line 248, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<HTTPSConnection(host='sn-watson-emotion.labs.skills.network', port=443) at 0x242ed75cef0>, 'Connection to sn-watson-emotion.labs.skills.network timed out. (connect timeout=15)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\requests\adapters.py", line 696, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\urllib3\connectionpool.py", line 847, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\urllib3\util\retry.py", line 555, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='sn-watson-emotion.labs.skills.network', port=443): Max retries exceeded with url: /v1/watson.runtime.nlp.v1/NlpService/EmotionPredict (Caused by ConnectTimeoutError(<HTTPSConnection(host='sn-watson-emotion.labs.skills.network', port=443) at 0x242ed75cef0>, 'Connection to sn-watson-emotion.labs.skills.network timed out. (connect timeout=15)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\test_emotion_detection.py", line 22, in test_disgust
+    result = emotion_detector("I feel disgusted just hearing about this")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\EmotionDetection\emotion_detection.py", line 24, in emotion_detector
+    response = requests.post(
+               ^^^^^^^^^^^^^^
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\requests\api.py", line 134, in post
+    return request("post", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\requests\api.py", line 71, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\requests\sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\requests\sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\requests\adapters.py", line 717, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='sn-watson-emotion.labs.skills.network', port=443): Max retries exceeded with url: /v1/watson.runtime.nlp.v1/NlpService/EmotionPredict (Caused by ConnectTimeoutError(<HTTPSConnection(host='sn-watson-emotion.labs.skills.network', port=443) at 0x242ed75cef0>, 'Connection to sn-watson-emotion.labs.skills.network timed out. (connect timeout=15)'))
+
+======================================================================
+ERROR: test_fear (test_emotion_detection.TestEmotionDetector.test_fear)
+Recognize fear.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\urllib3\connection.py", line 239, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\urllib3\connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\urllib3\connectionpool.py", line 494, in _make_request
+    raise new_e
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\urllib3\connectionpool.py", line 470, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\urllib3\connectionpool.py", line 1125, in _validate_conn
+    conn.connect()
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\urllib3\connection.py", line 827, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\urllib3\connection.py", line 248, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<HTTPSConnection(host='sn-watson-emotion.labs.skills.network', port=443) at 0x242ebe2b8c0>, 'Connection to sn-watson-emotion.labs.skills.network timed out. (connect timeout=15)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\requests\adapters.py", line 696, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\urllib3\connectionpool.py", line 847, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\urllib3\util\retry.py", line 555, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='sn-watson-emotion.labs.skills.network', port=443): Max retries exceeded with url: /v1/watson.runtime.nlp.v1/NlpService/EmotionPredict (Caused by ConnectTimeoutError(<HTTPSConnection(host='sn-watson-emotion.labs.skills.network', port=443) at 0x242ebe2b8c0>, 'Connection to sn-watson-emotion.labs.skills.network timed out. (connect timeout=15)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\test_emotion_detection.py", line 32, in test_fear
+    result = emotion_detector("I am really afraid that this will happen")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\EmotionDetection\emotion_detection.py", line 24, in emotion_detector
+    response = requests.post(
+               ^^^^^^^^^^^^^^
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\requests\api.py", line 134, in post
+    return request("post", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\requests\api.py", line 71, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\requests\sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\requests\sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\requests\adapters.py", line 717, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='sn-watson-emotion.labs.skills.network', port=443): Max retries exceeded with url: /v1/watson.runtime.nlp.v1/NlpService/EmotionPredict (Caused by ConnectTimeoutError(<HTTPSConnection(host='sn-watson-emotion.labs.skills.network', port=443) at 0x242ebe2b8c0>, 'Connection to sn-watson-emotion.labs.skills.network timed out. (connect timeout=15)'))
+
+======================================================================
+ERROR: test_joy (test_emotion_detection.TestEmotionDetector.test_joy)
+Recognize joy.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\urllib3\connection.py", line 239, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\urllib3\connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\urllib3\connectionpool.py", line 494, in _make_request
+    raise new_e
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\urllib3\connectionpool.py", line 470, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\urllib3\connectionpool.py", line 1125, in _validate_conn
+    conn.connect()
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\urllib3\connection.py", line 827, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\urllib3\connection.py", line 248, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<HTTPSConnection(host='sn-watson-emotion.labs.skills.network', port=443) at 0x242eb5696d0>, 'Connection to sn-watson-emotion.labs.skills.network timed out. (connect timeout=15)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\requests\adapters.py", line 696, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\urllib3\connectionpool.py", line 847, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\urllib3\util\retry.py", line 555, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='sn-watson-emotion.labs.skills.network', port=443): Max retries exceeded with url: /v1/watson.runtime.nlp.v1/NlpService/EmotionPredict (Caused by ConnectTimeoutError(<HTTPSConnection(host='sn-watson-emotion.labs.skills.network', port=443) at 0x242eb5696d0>, 'Connection to sn-watson-emotion.labs.skills.network timed out. (connect timeout=15)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\test_emotion_detection.py", line 12, in test_joy
+    result = emotion_detector("I am glad this happened")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\EmotionDetection\emotion_detection.py", line 24, in emotion_detector
+    response = requests.post(
+               ^^^^^^^^^^^^^^
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\requests\api.py", line 134, in post
+    return request("post", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\requests\api.py", line 71, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\requests\sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\requests\sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\requests\adapters.py", line 717, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='sn-watson-emotion.labs.skills.network', port=443): Max retries exceeded with url: /v1/watson.runtime.nlp.v1/NlpService/EmotionPredict (Caused by ConnectTimeoutError(<HTTPSConnection(host='sn-watson-emotion.labs.skills.network', port=443) at 0x242eb5696d0>, 'Connection to sn-watson-emotion.labs.skills.network timed out. (connect timeout=15)'))
+
+======================================================================
+ERROR: test_sadness (test_emotion_detection.TestEmotionDetector.test_sadness)
+Recognize sadness.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\urllib3\connection.py", line 239, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\urllib3\connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\urllib3\connectionpool.py", line 494, in _make_request
+    raise new_e
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\urllib3\connectionpool.py", line 470, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\urllib3\connectionpool.py", line 1125, in _validate_conn
+    conn.connect()
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\urllib3\connection.py", line 827, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\urllib3\connection.py", line 248, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<HTTPSConnection(host='sn-watson-emotion.labs.skills.network', port=443) at 0x242ed75d640>, 'Connection to sn-watson-emotion.labs.skills.network timed out. (connect timeout=15)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\requests\adapters.py", line 696, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\urllib3\connectionpool.py", line 847, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\urllib3\util\retry.py", line 555, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='sn-watson-emotion.labs.skills.network', port=443): Max retries exceeded with url: /v1/watson.runtime.nlp.v1/NlpService/EmotionPredict (Caused by ConnectTimeoutError(<HTTPSConnection(host='sn-watson-emotion.labs.skills.network', port=443) at 0x242ed75d640>, 'Connection to sn-watson-emotion.labs.skills.network timed out. (connect timeout=15)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\test_emotion_detection.py", line 27, in test_sadness
+    result = emotion_detector("I am so sad about this")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\EmotionDetection\emotion_detection.py", line 24, in emotion_detector
+    response = requests.post(
+               ^^^^^^^^^^^^^^
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\requests\api.py", line 134, in post
+    return request("post", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\requests\api.py", line 71, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\requests\sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\requests\sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ibnom\Desktop\cert\emotion-detector\.venv\Lib\site-packages\requests\adapters.py", line 717, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='sn-watson-emotion.labs.skills.network', port=443): Max retries exceeded with url: /v1/watson.runtime.nlp.v1/NlpService/EmotionPredict (Caused by ConnectTimeoutError(<HTTPSConnection(host='sn-watson-emotion.labs.skills.network', port=443) at 0x242ed75d640>, 'Connection to sn-watson-emotion.labs.skills.network timed out. (connect timeout=15)'))
+
+----------------------------------------------------------------------
+Ran 5 tests in 150.439s
+
+FAILED (errors=5)
+
+Exit code: 1

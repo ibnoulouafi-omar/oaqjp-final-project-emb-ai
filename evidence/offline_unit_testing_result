@@ -1,0 +1,25 @@
+OFFLINE TESTS: HTTP responses are mocked. Not live Watson model validation.
+python -m unittest -v tests.test_offline
+test_blank_input_does_not_call_service (tests.test_offline.OfflineTests.test_blank_input_does_not_call_service)
+Reject missing or whitespace-only input locally. ... ok
+test_blank_route (tests.test_offline.OfflineTests.test_blank_route)
+Display the required blank-input message. ... ok
+test_http_400 (tests.test_offline.OfflineTests.test_http_400)
+Return None fields for a service rejection. ... ok
+test_http_500_propagates (tests.test_offline.OfflineTests.test_http_500_propagates)
+Never convert service outages into fabricated predictions. ... ok
+test_index (tests.test_offline.OfflineTests.test_index)
+Serve the application page. ... ok
+test_request_contract_and_format (tests.test_offline.OfflineTests.test_request_contract_and_format)
+Send the required request and select the largest returned score. ... ok
+test_success_route (tests.test_offline.OfflineTests.test_success_route)
+Render the supplied prediction as plain text. ... ok
+test_unavailable_route (tests.test_offline.OfflineTests.test_unavailable_route)
+Handle timeouts without exposing implementation details. ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.016s
+
+OK
+
+Exit code: 0
