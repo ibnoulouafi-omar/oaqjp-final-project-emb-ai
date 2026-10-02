@@ -16,7 +16,7 @@ class OfflineTests(unittest.TestCase):
         response = Mock(status_code=200)
         response.json.return_value = {"emotionPredictions": [{"emotion": scores}]}
         with patch("EmotionDetection.emotion_detection.requests.post", return_value=response) as post:
-            result = emotion_detector("A sample sentence")
+            result = emotion_detector(text_to_analyse="A sample sentence")
         post.assert_called_once_with(
             URL, json={"raw_document": {"text": "A sample sentence"}},
             headers=HEADERS, timeout=15,

@@ -1,3 +1,4 @@
+Project directory: C:\Users\Ibnom\Desktop\cert\emotion-detector
 python -m pylint server.py
 
 --------------------------------------------------------------------

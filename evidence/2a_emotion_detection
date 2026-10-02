@@ -3,7 +3,7 @@
 import requests
 
 
-def emotion_detector(text_to_analyze):
+def emotion_detector(text_to_analyse):
     """Send text to Watson NLP and return the raw JSON response text."""
     url = (
         "https://sn-watson-emotion.labs.skills.network/"
@@ -14,7 +14,7 @@ def emotion_detector(text_to_analyze):
     }
     response = requests.post(
         url,
-        json={"raw_document": {"text": text_to_analyze}},
+        json={"raw_document": {"text": text_to_analyse}},
         headers=headers,
         timeout=15,
     )

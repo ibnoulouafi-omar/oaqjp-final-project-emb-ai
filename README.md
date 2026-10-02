@@ -55,3 +55,5 @@ python collect_evidence.py --live
 ```
 
 `6b_deployment_test.png` shows the real locally deployed initial interface, without a prediction. `7c_error_handling_interface.png` shows a real blank-input error. Neither screenshot uses a mocked response. A successful live prediction screenshot remains to be captured inside the course lab.
+
+Grading feedback requires an actual anger prediction for the package-validation output (`4b_packaging_test`), not just a successful import or a blank-input result. Run the updated live evidence collector in the course lab to obtain it. The initial deployment screenshot was rejected and must be replaced with a screenshot showing real scores and a dominant emotion. See the updated submission checklist before resubmitting.

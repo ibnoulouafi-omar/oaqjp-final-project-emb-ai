@@ -1,0 +1,7 @@
+Project directory: C:\Users\Ibnom\Desktop\cert\emotion-detector
+python -c "import EmotionDetection; from EmotionDetection.emotion_detection import emotion_detector; print('EmotionDetection is a valid package:', hasattr(EmotionDetection, '__path__')); print('emotion_detector is callable:', callable(emotion_detector)); print('Blank-input check:', emotion_detector(''))"
+EmotionDetection is a valid package: True
+emotion_detector is callable: True
+Blank-input check: {'anger': None, 'disgust': None, 'fear': None, 'joy': None, 'sadness': None, 'dominant_emotion': None}
+
+Exit code: 0

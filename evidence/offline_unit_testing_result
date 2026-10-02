@@ -1,4 +1,5 @@
 OFFLINE TESTS: HTTP responses are mocked. Not live Watson model validation.
+Project directory: C:\Users\Ibnom\Desktop\cert\emotion-detector
 python -m unittest -v tests.test_offline
 test_blank_input_does_not_call_service (tests.test_offline.OfflineTests.test_blank_input_does_not_call_service)
 Reject missing or whitespace-only input locally. ... ok
@@ -18,7 +19,7 @@ test_unavailable_route (tests.test_offline.OfflineTests.test_unavailable_route)
 Handle timeouts without exposing implementation details. ... ok
 
 ----------------------------------------------------------------------
-Ran 8 tests in 0.016s
+Ran 8 tests in 0.017s
 
 OK
 
